@@ -1,10 +1,7 @@
-const getUser = async () => {
-  try {
-    const data = await fetch("https://jsonplaceholder.typicode.com/users");
-    console.log(data);
-  } catch (error) {
-    console.log(error);
-  }
+const GetUser = async () => {
+  await fetch("https://jsonplaceholder.typicode.com/users").then((Response) =>
+    Response.json()
+  );
 };
 
-export default getUser;
+export default GetUser;
